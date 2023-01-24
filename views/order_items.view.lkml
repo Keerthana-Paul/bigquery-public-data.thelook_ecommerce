@@ -85,7 +85,7 @@ view: order_items {
     type: sum
     value_format_name: usd
     sql: ${sale_price} ;;
-    drill_fields: [id,order_id,product_id,product.name,user_id,user.first_name,users.last_name, users.age, users.city, users.country,created_at_date]
+    drill_fields: [id,order_id,product_id,product.name,user_id,users.user_name, users.age, users.city, users.country,created_at_date]
   }
 
 }
