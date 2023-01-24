@@ -117,4 +117,10 @@ view: users {
       location
     ]
   }
+
+  # new measure
+  measure : user_count {
+    type: count
+    sql: ${id} ;;
+  }
 }
