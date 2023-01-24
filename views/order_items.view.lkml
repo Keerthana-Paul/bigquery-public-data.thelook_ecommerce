@@ -88,4 +88,9 @@ view: order_items {
     drill_fields: [order_id,product_id,products.name,user_id,users.user_name, users.age, users.city, users.country,created_at_date]
   }
 
+  measure: average_sale_price {
+    type: average
+    sql: ${sale_price} ;;
+  }
+
 }

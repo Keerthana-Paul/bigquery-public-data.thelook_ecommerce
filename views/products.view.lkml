@@ -25,9 +25,11 @@ view: products {
   }
 
   dimension: name {
+    label: "Product Name"
     type: string
     sql: ${TABLE}.name ;;
   }
+
 
   dimension: brand {
     type: string
