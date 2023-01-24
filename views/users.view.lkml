@@ -27,7 +27,7 @@ view: users {
   # new dimension
   dimension: user_name {
     type: string
-    sql: concat(${first_name},"",${last_name}) ;;
+    sql: concat(${first_name}," ",${last_name}) ;;
   }
 
   dimension: email {
