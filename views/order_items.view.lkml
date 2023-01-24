@@ -5,6 +5,7 @@ view: order_items {
   }
 
   measure: count {
+    label: "Order count"
     type: count
     drill_fields: [order_id,product_id,products.name,user_id,users.user_name, users.age, users.city, users.country,created_at_date]
   }

@@ -5,6 +5,7 @@ view: users {
   }
 
   measure: count {
+    label: "User count"
     type: count
     drill_fields: [detail*]
   }

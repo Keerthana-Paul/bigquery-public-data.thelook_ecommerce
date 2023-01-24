@@ -5,6 +5,7 @@ view: products {
   }
 
   measure: count {
+    label: "Product count"
     type: count
     drill_fields: [detail*]
   }
