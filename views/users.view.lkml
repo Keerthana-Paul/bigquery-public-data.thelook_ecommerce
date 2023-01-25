@@ -118,9 +118,4 @@ view: users {
     ]
   }
 
-  # new measure
-  measure : user_count {
-    type: count
-    sql: ${id} ;;
-  }
 }

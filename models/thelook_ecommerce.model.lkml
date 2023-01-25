@@ -44,3 +44,13 @@ explore: order_items
 }
 
 explore: distribution_centers {}
+
+explore : events {
+  label : "Events and Users"
+
+  join: users {
+    type: left_outer
+    relationship: many_to_one
+    sql_on: ${users.id} = ${events.user_id} ;;
+  }
+}

@@ -81,7 +81,7 @@ view: order_items {
     ]
   }
 
-# new measure for Total sales
+# new fields
   measure: total_sale_price {
     type: sum
     value_format_name: usd
@@ -93,5 +93,12 @@ view: order_items {
     type: average
     sql: ${sale_price} ;;
   }
+
+  dimension: days_since_last_order {
+   description: "Recency"
+   type: number
+   order_by_field: created_at_date
+   sql: diff_days(${created_at_date},now()) ;;
+ }
 
 }
