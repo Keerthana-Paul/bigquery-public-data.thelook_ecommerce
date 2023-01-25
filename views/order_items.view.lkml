@@ -94,11 +94,10 @@ view: order_items {
     sql: ${sale_price} ;;
   }
 
-  dimension: days_since_last_order {
+  measure: days_since_order {
    description: "Recency"
    type: number
-   order_by_field: created_at_date
-   sql: diff_days(${created_at_date},now()) ;;
+   sql: diff_days(${order_items.created_at_date},now()) ;;
  }
 
 }
