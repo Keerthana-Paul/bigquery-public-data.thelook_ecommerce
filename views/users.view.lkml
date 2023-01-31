@@ -17,11 +17,13 @@ view: users {
 
   dimension: first_name {
     type: string
+    hidden: yes
     sql: ${TABLE}.first_name ;;
   }
 
   dimension: last_name {
     type: string
+    hidden:  yes
     sql: ${TABLE}.last_name ;;
   }
 

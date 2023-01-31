@@ -42,6 +42,7 @@ view: order_items {
 
   dimension_group: created_at {
     type: time
+    timeframes: [time, hour, date, week, month, year, hour_of_day, day_of_week, month_num, raw, week_of_year,month_name]
     sql: ${TABLE}.created_at ;;
   }
 
@@ -92,6 +93,11 @@ view: order_items {
   measure: average_sale_price {
     type: average
     sql: ${sale_price} ;;
+  }
+
+  dimension: days_since_sold {
+    label: "Days Since Sold"
+    sql: TIMESTAMP_DIFF(${created_at_raw},CURRENT_TIMESTAMP(), DAY) ;;
   }
 
   measure: days_since_order {
