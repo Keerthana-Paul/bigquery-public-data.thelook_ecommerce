@@ -95,15 +95,9 @@ view: order_items {
     sql: ${sale_price} ;;
   }
 
-  dimension: days_since_sold {
-    label: "Days Since Sold"
+  dimension: days_since_order {
+  #  label: "Recency"
     sql: TIMESTAMP_DIFF(${created_at_raw},CURRENT_TIMESTAMP(), DAY) ;;
   }
-
-  measure: days_since_order {
-   description: "Recency"
-   type: number
-   sql: diff_days(${order_items.created_at_date},now()) ;;
- }
 
 }
