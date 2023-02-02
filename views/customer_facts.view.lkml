@@ -13,7 +13,14 @@ view: customer_facts {
     dimension: user_id {
       type: number
       sql: ${TABLE}.user_id ;;
+
     }
+
+  dimension_group: created_at {
+    type: time
+    timeframes: [time, hour, date, week, month, year, hour_of_day, day_of_week, month_num, raw, week_of_year,month_name]
+    sql: ${TABLE}.created_at ;;
+  }
 
     dimension: lifetime_orders {
       type: number
@@ -42,9 +49,5 @@ view: customer_facts {
     sql: ${lifetime_orders} > 1 ;;
   }
 
-  dimension: days_since_order {
-    #  label: "Recency"
-    sql: TIMESTAMP_DIFF(${TABLE}.created_at,CURRENT_TIMESTAMP(), DAY) ;;
-  }
 
     }
