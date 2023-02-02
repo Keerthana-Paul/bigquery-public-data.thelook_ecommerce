@@ -120,4 +120,12 @@ view: users {
     ]
   }
 
+  dimension: age_tier {
+    label: "Age Tier"
+    type: tier
+    tiers: [10, 20, 30, 40, 50, 60, 70]
+    style: integer
+    sql: ${age} ;;
+  }
+
 }

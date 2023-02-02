@@ -42,11 +42,15 @@ explore: order_items
     sql_on: ${inventory_items.id} = ${order_items.inventory_item_id} ;;
   }
 
+  join: customer_facts {
+    type: left_outer
+    relationship: many_to_one
+    sql_on: ${customer_facts.user_id} = ${order_items.user_id} ;;
+  }
+
 }
 
 explore: distribution_centers {}
-
-explore: customer_facts {}
 
 explore : events {
   label : "Events and Users"
