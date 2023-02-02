@@ -46,7 +46,7 @@ explore: order_items
 
 explore: distribution_centers {}
 
-explore: user_order_facts {}
+explore: customer_facts {}
 
 explore : events {
   label : "Events and Users"
