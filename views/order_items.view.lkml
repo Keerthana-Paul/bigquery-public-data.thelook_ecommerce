@@ -100,4 +100,5 @@ view: order_items {
     sql: TIMESTAMP_DIFF(${created_at_raw},CURRENT_TIMESTAMP(), DAY) ;;
   }
 
+
 }

@@ -41,9 +41,12 @@ explore: order_items
     relationship: many_to_one
     sql_on: ${inventory_items.id} = ${order_items.inventory_item_id} ;;
   }
+
 }
 
 explore: distribution_centers {}
+
+explore: user_order_facts {}
 
 explore : events {
   label : "Events and Users"
@@ -53,4 +56,5 @@ explore : events {
     relationship: many_to_one
     sql_on: ${users.id} = ${events.user_id} ;;
   }
+
 }
