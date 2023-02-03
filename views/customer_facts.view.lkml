@@ -13,7 +13,7 @@ view: customer_facts {
     dimension: user_id {
       type: number
       sql: ${TABLE}.user_id ;;
-
+      drill_fields: [user_id,users.user_name, users.age, users.city, users.country,days_as_customer,first_order_date,latest_order_date]
     }
 
   dimension_group: created_at {
